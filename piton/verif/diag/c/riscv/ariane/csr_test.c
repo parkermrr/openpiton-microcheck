@@ -5,14 +5,14 @@ int main(int argc, char ** argv) {
   
   printf("Beginning inline CSR assembly...\n");
   asm volatile (
-    "csrw 0x300, %0"
+    "csrw 0xC20, %0"
     :
     : "r" (writeValue)
   );
   
   unsigned int writeResult;
   asm volatile (
-      "csrr %0, 0x300"
+      "csrr %0, 0xC20"
       : "=r" (writeResult)    // Output: store the value in result
   );
 
