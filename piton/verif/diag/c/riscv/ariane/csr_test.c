@@ -5,7 +5,7 @@ int main(int argc, char ** argv) {
   
   printf("Beginning inline CSR assembly...\n");
   asm volatile (
-    "csrrw 0xC20, %0"
+    "csrw 0xC20, %0"
     :
     : "r" (writeValue)
   );
