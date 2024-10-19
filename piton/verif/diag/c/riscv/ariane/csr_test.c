@@ -25,8 +25,7 @@ int main(int argc, char ** argv) {
     :
     : "r" (writeValue)
   );
-  
-  unsigned int writeResult;
+
   asm volatile (
       "csrr %0, 0xC20"
       : "=r" (writeResult)    // Output: store the value in result
